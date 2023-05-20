@@ -32,3 +32,55 @@ table {
     transform: scale(1.1);
     background-color: rgba(255, 0, 0, 0.096);
 }
+
+.hdr-table{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.add-btn-div{
+    padding-top: .4rem;
+    padding-right: 24px;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 255);
+    transform: scale(1.05);
+}
+
+.add-btn{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3F51B5;
+    gap: .2rem;
+    padding: 5px 25px;
+    color: white;
+    border: none;
+    transition: ease all .2s;
+}
+
+.icon{
+    margin-left: -10px;
+}
+
+.table-row:hover {
+    background-color: #e2e2e29d;
+    cursor: pointer;
+}
+
+.showcase{
+    width: 90%;
+    margin: 1rem auto;
+    border: solid 1px rgba(0, 0, 0, 0.322);
+    display: flex;
+    flex-direction: row;
+}
+
+.content-user{
+    padding: 24px;
+}

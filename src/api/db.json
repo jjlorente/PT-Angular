@@ -1,40 +1,88 @@
 {
-  "deliveries": [
+  "users": [
     {
       "id": 1,
-      "name": "Juan Pérez",
-      "phone": "6761422",
-      "mail": "juan.perez@gmail.com"
+      "name": "Juan Pérees",
+      "phone": "555-123-456",
+      "mail": "juan.perez@gmail.com",
+      "job": "Developer"
     },
     {
       "id": 2,
       "name": "Ana López",
       "phone": "555-789-012",
-      "mail": "ana.lopez@gmail.com"
+      "mail": "ana.lopez@gmail.com",
+      "job": "Designer"
     },
     {
       "id": 3,
-      "name": "Carlos Gómez",
+      "name": "Carlos",
       "phone": "555-456-789",
-      "mail": "carlos.gomez@gmail.com"
+      "mail": "carlos.gomez@gmail.com",
+      "job": "Manager"
     },
     {
       "id": 4,
       "name": "Juan Pérez",
       "phone": "555-234-567",
-      "mail": "juan.perez2@gmail.com"
+      "mail": "juan.perez2@gmail.com",
+      "job": "Developer"
     },
     {
       "id": 5,
-      "name": "A",
-      "phone": "555-567",
-      "mail": "ana.lopez2@gmail.com"
+      "name": "Ana López",
+      "phone": "555-567-8902",
+      "mail": "ana.lopez2@gmail.com",
+      "job": "Manager"
     },
     {
       "id": 6,
       "name": "Carlos Gómez",
       "phone": "555-678-901",
-      "mail": "carlos.gomez2@gmail.com"
+      "mail": "carlos.gomez2@gmail.com",
+      "job": "Analyst"
+    },
+    {
+      "id": 7,
+      "name": "Juan Pérezz",
+      "phone": "555-123-456",
+      "mail": "juan.perez@gmail.com",
+      "job": "Developer"
+    },
+    {
+      "id": 8,
+      "name": "Anas",
+      "phone": "555-789-012",
+      "mail": "ana.lopez@gmail.com",
+      "job": "Designer"
+    },
+    {
+      "id": 9,
+      "name": "Carlosggg",
+      "phone": "555-456-789",
+      "mail": "carlos.gomez@gmail.com",
+      "job": "Manager"
+    },
+    {
+      "id": 10,
+      "name": "Juan",
+      "phone": "555-234-567",
+      "mail": "juan.perez2@gmail.cm",
+      "job": "Developer"
+    },
+    {
+      "id": 11,
+      "name": "Ana",
+      "phone": "555-567-890",
+      "mail": "ana.lopez2@gmail.cm",
+      "job": "Manager"
+    },
+    {
+      "id": 12,
+      "name": "Carlos",
+      "phone": "555-678-901",
+      "mail": "carlos.gomez2@gail.com",
+      "job": "Analyst"
     }
   ]
 }

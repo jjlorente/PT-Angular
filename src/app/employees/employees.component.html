@@ -1,9 +1,18 @@
 <div class="cstm-div">
 
-  <mat-form-field class="form-field">
-    <mat-label>Search</mat-label>
-    <input matInput type="text" [(ngModel)]="searchValue" (keyup)="applyFilter()">
-  </mat-form-field>
+  <div class="hdr-table">
+    <mat-form-field class="form-field">
+      <mat-label>Search</mat-label>
+      <input matInput type="text" [(ngModel)]="searchValue" (keyup)="applyFilter()">
+    </mat-form-field>
+
+    <div class="add-btn-div">
+      <button color="primary" class="add-btn" (click)="openAddUserDialog()">
+        <mat-icon class="icon">add</mat-icon> Add User
+      </button>
+    </div>
+    
+  </div>
 
   <table mat-table [dataSource]="dataSource" matSort class="table-div">
 
@@ -41,13 +50,23 @@
     
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="table-row" (click)="selectUser(row.id)"></tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+  <mat-paginator [pageSizeOptions]="[10, 20]"
                   showFirstLastButtons
                   aria-label="Select page of deliveries">
   </mat-paginator>
 </div>
+
+<div *ngIf="userSelected" class="showcase">
+  <div class="content-user">
+    <h2>{{userSelected.name}} - {{userSelected.job}}</h2>
+    <p>Phone: {{userSelected.phone}}</p>
+    <p>Email: {{userSelected.mail}}</p>
+  </div>
+</div>
+
+
   
   

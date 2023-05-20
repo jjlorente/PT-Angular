@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { DeliveryService } from '../services/employees.service';
+import { UsersService } from '../../services/employees.service';
 
 @Component({
   selector: 'app-edit-user-dialog',
@@ -33,24 +33,22 @@ export class EditUserDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<EditUserDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private deliveryService: DeliveryService,
+    private usersService: UsersService,
   ) {
     this.userId = data.userId; 
     this.getUserDetails();
   } 
 
   getUserDetails() {
-    this.deliveryService.getUser(this.userId).subscribe((user) => {
+    this.usersService.getUser(this.userId).subscribe((user) => {
       this.user = user;
-      console.log(this.user)
     });
   }
 
   saveChanges() {
-    this.deliveryService.updateUser(this.user).subscribe((user) => {
-      console.log(user);
-      this.deliveryService.getDeliveries();
-      // Aquí puedes manejar la respuesta de la API después de realizar los cambios
+    this.usersService.updateUser(this.user).subscribe((user) => {
+      this.usersService.getUsers();
     });
   }
+  
 }

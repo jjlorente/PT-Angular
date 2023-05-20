@@ -11,19 +11,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { EmployeesComponent } from './employees/employees.component';
-import { ConfirmationDeleteDialogComponent } from './confirmation-delete-dialog/confirmation-delete-dialog.component';
+import { ConfirmationDeleteDialogComponent } from './dialogs/confirmation-delete-dialog/confirmation-delete-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { EditUserDialogComponent } from './edit-user-dialog/edit-user-dialog.component';
+import { EditUserDialogComponent } from './dialogs/edit-user-dialog/edit-user-dialog.component';
+import { AddUserDialogComponent } from './dialogs/add-user-dialog/add-user-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
     ConfirmationDeleteDialogComponent,
-    EditUserDialogComponent
+    EditUserDialogComponent,
+    AddUserDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { EditUserDialogComponent } from './edit-user-dialog/edit-user-dialog.com
     MatDialogModule,
     MatButtonModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
