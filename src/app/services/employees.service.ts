@@ -17,5 +17,12 @@ export class DeliveryService {
         let deliveries = await deliveriesPromise;
         this.deliveriesStore.next(deliveries);
       })
-    }
+  }
+
+  deleteDelivery(deliveryId: number) {
+    console.log(deliveryId)
+    const url = `${environment.apiUrl}/deliveries/${deliveryId}`;
+    console.log(url)
+    return this.http.delete(url);
+  }
 }

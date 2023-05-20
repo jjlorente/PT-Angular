@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+.cstm-div {
+    width: 90%;
+    margin: 1rem auto;
+    border: solid 1px rgba(0, 0, 0, 0.322);
+}
+
+.table-div {
+    border: solid 1px rgba(0, 0, 0, 0.014);
+}

@@ -8,10 +8,18 @@ import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
+import { MatIconModule } from '@angular/material/icon';
+import { EmployeesComponent } from './employees/employees.component';
+import { ConfirmationDeleteDialogComponent } from './confirmation-delete-dialog/confirmation-delete-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeesComponent,
+    ConfirmationDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSortModule,
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

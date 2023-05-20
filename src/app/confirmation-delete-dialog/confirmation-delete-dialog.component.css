@@ -1,0 +1,25 @@
+.cancel-btn {
+    background-color: #f44336dc;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cancel-btn:hover {
+    background-color: #f44336;
+}
+
+.delete-btn {
+    background-color: #2195f3bb;
+    color: #ffffff;
+    text-align: center !important;
+}
+
+.delete-btn:hover {
+    background-color: #2195f3;
+}
+
+.actions-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
