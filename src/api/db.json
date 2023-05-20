@@ -1,40 +1,40 @@
 {
-    "deliveries": [
-        {
-            "id": 1,
-            "name": "Juan Pérez",
-            "available": false
-        },
-        {
-            "id": 2,
-            "name": "Ana López",
-            "available": false
-        },
-        {
-            "id": 3,
-            "name": "Carlos Gómez",
-            "available": true
-        },
-        {
-            "id": 4,
-            "name": "Juan Pérez",
-            "available": false
-        },
-        {
-            "id": 5,
-            "name": "Ana López",
-            "available": false
-        },
-        {
-            "id": 6,
-            "name": "Carlos Gómez",
-            "available": true
-        }
-    ]
+  "deliveries": [
+    {
+      "id": 1,
+      "name": "Juan Pérez",
+      "phone": "6761422",
+      "mail": "juan.perez@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Ana López",
+      "phone": "555-789-012",
+      "mail": "ana.lopez@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Carlos Gómez",
+      "phone": "555-456-789",
+      "mail": "carlos.gomez@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Juan Pérez",
+      "phone": "555-234-567",
+      "mail": "juan.perez2@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "A",
+      "phone": "555-567",
+      "mail": "ana.lopez2@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "Carlos Gómez",
+      "phone": "555-678-901",
+      "mail": "carlos.gomez2@gmail.com"
+    }
+  ]
 }
-  
-  
-  
-  
-  
-  

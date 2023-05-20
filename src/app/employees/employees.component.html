@@ -1,5 +1,10 @@
 <div class="cstm-div">
-  <input matInput placeholder="Buscar">
+
+  <mat-form-field class="form-field">
+    <mat-label>Search</mat-label>
+    <input matInput type="text" [(ngModel)]="searchValue" (keyup)="applyFilter()">
+  </mat-form-field>
+
   <table mat-table [dataSource]="dataSource" matSort class="table-div">
 
     <ng-container matColumnDef="id">
@@ -12,19 +17,28 @@
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="available">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Available </th>
-      <td mat-cell *matCellDef="let element"> {{element.available}} </td>
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+      <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mail">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Mail </th>
+      <td mat-cell *matCellDef="let element"> {{element.mail}} </td>
     </ng-container>
 
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button color="warn" (click)="openConfirmationDialog(element.id)">
+        <button mat-icon-button color="primary" class="edit-btn" (click)="openEditUserDialog(element.id)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" class="delete-btn" (click)="openConfirmationDialog(element.id)">
           <mat-icon>delete</mat-icon>
         </button>
       </td>
     </ng-container>
+    
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

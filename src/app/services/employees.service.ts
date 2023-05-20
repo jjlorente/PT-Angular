@@ -19,10 +19,18 @@ export class DeliveryService {
       })
   }
 
-  deleteDelivery(deliveryId: number) {
-    console.log(deliveryId)
+  getUser(deliveryId: number){
     const url = `${environment.apiUrl}/deliveries/${deliveryId}`;
-    console.log(url)
+    return this.http.get(url);
+  }
+
+  deleteDelivery(deliveryId: number) {
+    const url = `${environment.apiUrl}/deliveries/${deliveryId}`;
     return this.http.delete(url);
+  }
+
+  updateUser(user: any) {
+    const url = `${environment.apiUrl}/deliveries/${user.id}`;
+    return this.http.put(url, user);
   }
 }

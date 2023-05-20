@@ -14,12 +14,16 @@ import { EmployeesComponent } from './employees/employees.component';
 import { ConfirmationDeleteDialogComponent } from './confirmation-delete-dialog/confirmation-delete-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { EditUserDialogComponent } from './edit-user-dialog/edit-user-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    ConfirmationDeleteDialogComponent
+    ConfirmationDeleteDialogComponent,
+    EditUserDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatSortModule,
     MatIconModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

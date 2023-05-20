@@ -6,11 +6,13 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { tap } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDeleteDialogComponent } from '../confirmation-delete-dialog/confirmation-delete-dialog.component'
+import { EditUserDialogComponent } from '../edit-user-dialog/edit-user-dialog.component';
 
 export interface Delivery {
   id: number;
   name: string;
-  available: boolean;
+  phone: string;
+  mail: string;
 }
 
 @Component({
@@ -20,7 +22,7 @@ export interface Delivery {
 })
 
 export class EmployeesComponent {
-  displayedColumns: string[] = ['id', 'name', 'available', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'phone', 'mail', 'actions'];
   dataSource = new MatTableDataSource<Delivery>([]);
 
   @ViewChild(MatSort) sort!: MatSort;
@@ -43,18 +45,36 @@ export class EmployeesComponent {
     });
   }
 
-  openConfirmationDialog(deliveryId: number) {
+  openConfirmationDialog(userId: number) {
     const dialogRef = this.dialog.open( ConfirmationDeleteDialogComponent, {
       width: '400px',
-      data: { deliveryId }
+      data: { userId }
     });
   
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.deliveryService.deleteDelivery(result.deliveryId).subscribe(() => {
+        this.deliveryService.deleteDelivery(result.userId).subscribe(() => {
           this.deliveryService.getDeliveries();
         });
       }
     });
   }
+
+  openEditUserDialog(userId: number) {
+    const dialogRef = this.dialog.open( EditUserDialogComponent, {
+      width: '400px',
+      data: { userId }
+    });
+  }
+
+  searchValue: string = '';
+
+  applyFilter() {
+    this.dataSource.filter = this.searchValue.trim().toLowerCase();
+    this.dataSource.filterPredicate = (data: Delivery, filter: string) => {
+      const searchData = `${data.id}${data.name}${data.phone}${data.mail}`.toLowerCase();
+      return searchData.includes(filter);
+    };
+  }
+
 }
