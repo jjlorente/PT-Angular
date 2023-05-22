@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Confirmación</h2>
+<div mat-dialog-content>
+    ¿Estás seguro de que deseas eliminar este usuario?
+</div>
+<div mat-dialog-actions class="actions-div">
+    <button mat-button mat-dialog-close color="primary" class="cancel-btn">Cancelar</button>
+    <button mat-button [mat-dialog-close]="data" color="warn" class="delete-btn">Eliminar</button>
+</div>

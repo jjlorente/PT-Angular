@@ -1,25 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Juan Pérees",
-      "phone": "555-123-456",
-      "mail": "juan.perez@gmail.com",
-      "job": "Developer"
-    },
-    {
       "id": 2,
-      "name": "Ana López",
+      "name": "Ana López<",
       "phone": "555-789-012",
       "mail": "ana.lopez@gmail.com",
       "job": "Designer"
-    },
-    {
-      "id": 3,
-      "name": "Carlos",
-      "phone": "555-456-789",
-      "mail": "carlos.gomez@gmail.com",
-      "job": "Manager"
     },
     {
       "id": 4,
@@ -76,13 +62,6 @@
       "phone": "555-567-890",
       "mail": "ana.lopez2@gmail.cm",
       "job": "Manager"
-    },
-    {
-      "id": 12,
-      "name": "Carlos",
-      "phone": "555-678-901",
-      "mail": "carlos.gomez2@gail.com",
-      "job": "Analyst"
     }
   ]
 }
